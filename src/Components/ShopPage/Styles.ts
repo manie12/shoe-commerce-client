@@ -18,5 +18,17 @@ export const useStyles = makeStyles(theme => ({
         paddingTop: "2em",
         fontSize: "2em",
         fontWeight: 900
+    },
+    image: {
+        height: "17em",
+        width: "17em"
+    },
+    container_image_grid: {
+        position: "relative"
+    },
+    container_image: {
+        position: "absolute",
+        top: "16em",
+        left: "6em"
     }
 }))
