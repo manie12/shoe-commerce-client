@@ -35,8 +35,7 @@ const Body = () => {
                     </Grid>
 
                 </Grid>
-                <Grid item style={{ backgroundColor: "#2596BE" }} sm={6}><img className={classes.imageGrid} src="/img1.jpg" alt="shoes " /></Grid>
-            </Grid >
+                <Grid item style={{ backgroundColor: "#2596BE" }} sm={6}><img className={classes.imageGrid} src="/img1.jpg" alt="shoes " /></Grid>           </Grid >
         </div >
     )
 }

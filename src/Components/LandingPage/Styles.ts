@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 import Image from '../../Image/img1.jpg';
 export const useStyles = makeStyles(theme => ({
     main_body: {
-        padding: '5em',
+        padding: '1em 1em 1em 5em ',
         backgroundColor: '#2596BE',
         height: "100vh",
         [theme.breakpoints.down("xs")]: {
@@ -68,7 +68,7 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     imageGrid: {
-        height: "40em",
+        height: "35em",
         width: "40em",
         mixBlendMode: "color-burn",
         objectFit: "contain",
