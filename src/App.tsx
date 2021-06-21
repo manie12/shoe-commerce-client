@@ -19,7 +19,7 @@ import Paypal from './Components/Checkout/Paypal';
 function App() {
   const [postData, setPostData] = useState<postsProps[]>([]);
   //const [postInfo, setPostInfo] = useState([])
-  const { loading, data: { posts } } = useQuery(FETCH_POST);
+  const { loading, data } = useQuery(FETCH_POST);
 
 
   const CartHandle = (postId: any) => {
@@ -40,7 +40,7 @@ function App() {
 
         </Route>
         <Route exact path="/shop"  >
-          <Shop posts={posts} loading={loading} CartHandle={CartHandle} postData={postData} />
+          <Shop posts={data?.posts} loading={loading} CartHandle={CartHandle} postData={postData} />
 
         </Route>
         <Route exact path="/contact"  >
@@ -48,11 +48,11 @@ function App() {
 
         </Route>
         <Route exact path="/cart"  >
-          <Cart posts={posts} loading={loading} postData={postData} />
+          <Cart posts={data?.posts} loading={loading} postData={postData} />
 
         </Route>
         <Route exact path="/paypal"  >
-          <Paypal posts={posts} />
+          <Paypal posts={data?.posts} />
         </Route>
 
 
