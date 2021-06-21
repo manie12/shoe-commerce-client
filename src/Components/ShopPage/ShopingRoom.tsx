@@ -44,7 +44,7 @@ const ShopingRoom: React.FC<load> = ({ posts, loading, CartHandle, postData }) =
             <Grid container item spacing={1} className={classes.container_image_grid}>
 
                 {
-                    posts && posts.map((post) => (
+                    posts.map((post) => (
 
                         <Grid container item sm={4} xs={12}>
                             <Grid item sm={12} xs={12} >
