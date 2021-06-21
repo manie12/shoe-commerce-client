@@ -44,6 +44,7 @@ export const useStyles = makeStyles(theme => ({
     image: {
         height: "17em",
         width: "17em",
+        objectFit: "contain",
         [theme.breakpoints.down("xs")]: {
             width: "25em",
             height: "17em",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Typography, Grid, AppBar, Toolbar } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import { useStyles } from './Styles';
 import { AddShoppingCart, ArrowBack } from '@material-ui/icons';
 

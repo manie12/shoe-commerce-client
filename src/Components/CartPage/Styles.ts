@@ -75,7 +75,7 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down("xs")]: {
             paddingTop: "2em"
         }
-    }
+    },
 
 
 }))
