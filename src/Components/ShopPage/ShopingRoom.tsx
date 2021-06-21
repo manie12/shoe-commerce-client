@@ -38,7 +38,7 @@ const ShopingRoom: React.FC<load> = ({ posts, loading, CartHandle, postData }) =
     if (loading) {
         return <p><CircularProgress /></p>
     }
-
+    console.log(posts)
     return (
         <div>
             <Grid container item spacing={1} className={classes.container_image_grid}>
