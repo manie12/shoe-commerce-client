@@ -20,6 +20,7 @@ function App() {
   const [postData, setPostData] = useState<postsProps[]>([]);
   const [postInfo, setPostInfo] = useState([])
   const { loading, data: { posts } } = useQuery(FETCH_POST);
+
   useEffect(() => {
     setPostInfo(posts)
   }, [posts])
