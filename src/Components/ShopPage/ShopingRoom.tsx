@@ -32,7 +32,7 @@ const ShopingRoom: React.FC<load> = ({ posts, loading, CartHandle, postData }) =
 
 
     if (!posts) {
-        console.log(posts)
+        return <p>page aempty</p>
 
     }
     if (loading) {
