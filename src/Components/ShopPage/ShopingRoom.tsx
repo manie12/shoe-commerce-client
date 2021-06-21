@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Grid, Typography, AppBar, Toolbar, Button, Badge } from '@material-ui/core';
 import { useStyles } from './Styles';
@@ -14,7 +14,7 @@ type load = {
 }
 
 const ShopingRoom: React.FC<load> = ({ posts, loading, CartHandle, postData }) => {
-
+    const [dataPost, setDataPost] = useState<postsProps[]>([])
     // const [singlePost, setSinglePost] = useState<string>();
     const history = useHistory();
     const classes = useStyles();
@@ -26,25 +26,27 @@ const ShopingRoom: React.FC<load> = ({ posts, loading, CartHandle, postData }) =
     // const handlePost = (postId: string) => {
     //     setSinglePost(postId)
     // }
+    useEffect(() => {
+        setDataPost(posts)
+    }, [posts])
 
 
 
 
-
-    if (!posts) {
+    if (!dataPost) {
         return <p>page aempty</p>
 
     }
     if (loading) {
         return <p><CircularProgress /></p>
     }
-    console.log(posts)
+    console.log(dataPost)
     return (
         <div>
             <Grid container item spacing={1} className={classes.container_image_grid}>
 
                 {
-                    posts.map((post) => (
+                    dataPost && dataPost.map((post) => (
 
                         <Grid container item sm={4} xs={12}>
                             <Grid item sm={12} xs={12} >
