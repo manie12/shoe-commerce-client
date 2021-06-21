@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
@@ -18,9 +18,11 @@ import Paypal from './Components/Checkout/Paypal';
 
 function App() {
   const [postData, setPostData] = useState<postsProps[]>([]);
-
+  const [postInfo, setPostInfo] = useState([])
   const { loading, data: { posts } } = useQuery(FETCH_POST);
-
+  useEffect(() => {
+    setPostInfo(posts)
+  }, [posts])
 
   const CartHandle = (postId: any) => {
 
@@ -40,7 +42,7 @@ function App() {
 
         </Route>
         <Route exact path="/shop"  >
-          <Shop posts={posts} loading={loading} CartHandle={CartHandle} postData={postData} />
+          <Shop posts={postInfo} loading={loading} CartHandle={CartHandle} postData={postData} />
 
         </Route>
         <Route exact path="/contact"  >
